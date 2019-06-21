@@ -1,0 +1,37 @@
+<p>
+  Stemmen en lunch van dag {{spel.dag}}:
+</p>
+
+<div  *ngFor="let speler of stemmen;index as i;index as j">
+  <label>{{speler.stemmer}}:
+    <select #i (change)="veranderStem(j,i.value)">
+		<option value=""></option>
+			<ng-container *ngFor="let doel of stemmen">
+			<option *ngIf="speler.stem==doel.stemmer" selected value={{doel.stemmer}}>{{doel.stemmer}}</option>
+			<option *ngIf="speler.stem!=doel.stemmer" value={{doel.stemmer}}>{{doel.stemmer}}</option>
+			</ng-container>
+		</select>
+  </label>
+</div>
+
+
+<div>
+  <label>Lunch:
+    <select #lunch (change)="veranderLunch(lunch.value)">
+		<option value=""></option>
+		
+			<ng-container *ngFor="let doel of stemmen">
+			<option *ngIf="dag.lunch==doel.stemmer" selected value={{doel.stemmer}}>{{doel.stemmer}}</option>
+			<option *ngIf="dag.lunch!=doel.stemmer" value={{doel.stemmer}}>{{doel.stemmer}}</option>
+			</ng-container>
+		
+		</select>
+  </label>
+</div>
+
+<div>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="dagverwerken();">
+    Dag verwerken
+  </button>
+</div>

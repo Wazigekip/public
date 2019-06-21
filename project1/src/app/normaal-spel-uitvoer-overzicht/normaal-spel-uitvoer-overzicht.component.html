@@ -1,0 +1,19 @@
+<p>
+  normaal-spel-uitvoer-overzicht works!
+</p>
+
+
+
+<ul class="dagen">
+	<li>
+		<a routerLink="/normaaluitvoerbegin/{{spel.id}}">
+			<span class="badge">-</span>Voordat het spel begint
+		</a>
+	</li>
+
+	<li *ngFor="let dag of dagen">
+		<a routerLink="/normaaluitvoer/{{spel.id}}/{{dag.dag}}">
+			<span class="badge">-</span>Dag {{dag.dag}}
+		</a>
+  </li>
+</ul>

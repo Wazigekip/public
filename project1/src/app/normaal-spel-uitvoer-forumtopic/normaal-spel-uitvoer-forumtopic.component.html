@@ -1,0 +1,14 @@
+<p>
+  normaal-spel-uitvoer-forumtopic works!
+</p>
+<ul>
+	<li>
+		
+		<textarea rows="1" cols="50" #titel>{{forumtopic.naam}}</textarea>
+		<button (click)="copyInputMessage(titel)" value="click to copy" >Copy from Textbox</button>
+	</li>
+	<li>
+		<textarea rows="10" cols="50" #inhoud>{{forumtopic.inhoud}}</textarea>
+		<button (click)="copyInputMessage(inhoud)" value="click to copy" >Copy from Textbox</button>
+	</li>
+</ul>

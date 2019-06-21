@@ -1,0 +1,26 @@
+<p>
+  De spelers die meedoen:
+</p>
+
+<div *ngIf="spel.dag==0">
+  <label>Spelersnaam:
+    <input #spelersNaam />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addSpelspeler(spelersNaam.value); spelersNaam.value='';">
+    add
+  </button>
+</div>
+
+<ul class="spelspelers">
+  <li *ngFor="let spelspeler of spelspelers; index as i">
+    <span class="badge">{{i+1}}</span>{{spelspeler.speler}} {{spelspeler.rol}} 
+  </li>
+</ul>
+
+<div *ngIf="spel.dag==0">
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="bevestig();">
+    Spelerslijst bevestigen
+  </button>
+</div>

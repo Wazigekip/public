@@ -1,0 +1,20 @@
+<p>
+  Mogelijke acties:
+</p>
+<ul class="acties">
+	<li>
+		<a routerLink="/spelspelerslijst/{{spel.id}}">
+			<span class="badge">-</span>Spelerlijst
+		</a>
+	</li>
+	<li *ngIf="spel.dag>0">
+		<a routerLink="/normaalinvoer/{{spel.id}}">
+			<span class="badge">-</span>Invoeracties
+		</a>
+	</li>
+	<li>
+		<a routerLink="/normaaluitvoeroverzicht/{{spel.id}}">
+			<span class="badge">-</span>Uitvoeracties
+		</a>
+	</li>
+</ul>

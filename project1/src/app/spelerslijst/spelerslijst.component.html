@@ -1,0 +1,18 @@
+<p>
+  De totale spelerslijst
+</p>
+<div>
+  <label>Spelersnaam:
+    <input #spelersNaam />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addSpeler(spelersNaam.value); spelersNaam.value=''">
+    add
+  </button>
+</div>
+
+<ul class="spelers">
+  <li *ngFor="let speler of spelers">
+    <span class="badge">{{speler.id}}</span> {{speler.naam}}
+  </li>
+</ul>

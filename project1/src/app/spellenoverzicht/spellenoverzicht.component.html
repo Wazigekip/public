@@ -1,0 +1,10 @@
+<p>
+  Spellen overzicht:
+</p>
+<ul class="spellen">
+  <li *ngFor="let spel of spellen">
+		<a routerLink="/normaal/{{spel.id}}">
+			<span class="badge">{{spel.id}}</span>Spel {{spel.id}}
+		</a>
+  </li>
+</ul>
