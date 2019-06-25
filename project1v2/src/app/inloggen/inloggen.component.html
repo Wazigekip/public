@@ -1,0 +1,11 @@
+<p>
+  Beschikbare spelleiders:
+</p>
+<ul class="spelleiders">
+  <li *ngFor="let spelleider of spelleiders">
+		<a routerLink="/spellenoverzicht/{{spelleider.id}}">
+			<span class="badge">{{spelleider.id}}</span>{{spelleider.naam}}
+		</a>
+  </li>
+</ul>
+

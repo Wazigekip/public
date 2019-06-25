@@ -1,0 +1,35 @@
+<p>
+  De spelers die meedoen:
+</p>
+
+<div *ngIf="spel.dag==0">
+  <label>Spelersnaam:
+    <input #spelersNaam />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addSpelspeler(spelersNaam.value); spelersNaam.value='';">
+    add
+  </button>
+</div>
+
+<table  width='100%'>
+<div class="spelspelers" *ngFor="let spelspeler of spelspelers; let i = index">
+  
+	<tr *ngIf="i % 4 == 0">
+    
+    <td *ngIf="i < spelspelers.length" width="300"><span class="badge">-</span> {{spelspelers[i].speler}} {{spelspelers[i].rol}}</td>
+    <td *ngIf="i + 1 < spelspelers.length" width="300"><span class="badge">-</span> {{spelspelers[i+1].speler}} {{spelspelers[i+1].rol}}</td>
+    <td *ngIf="i + 2 < spelspelers.length" width="300"><span class="badge">-</span> {{spelspelers[i+2].speler}} {{spelspelers[i+2].rol}}</td>
+    <td *ngIf="i + 3 < spelspelers.length" width="300"><span class="badge">-</span> {{spelspelers[i+3].speler}} {{spelspelers[i+3].rol}}</td>
+  </tr>
+</div>
+</table>
+
+<div *ngIf="spel.dag==0">
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="bevestig();">
+    Spelerslijst bevestigen
+  </button>
+</div>
+
+<button (click)="terug()">Terug</button>
