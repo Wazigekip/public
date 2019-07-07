@@ -1,0 +1,22 @@
+<p>
+  normaal-spel-uitvoer-begin works!
+</p>
+<ul class="topics">
+	<li>
+		<a routerLink="/rolberichtenuitvoer/{{spel.id}}/0">
+			<span class="badge">0</span>Rolberichten
+		</a>
+	</li>
+	<li>
+		<a routerLink="/infotopicuitvoer/{{spel.id}}">
+			<span class="badge">-</span>Infotopic
+		</a>
+	</li>
+	<li *ngFor="let topic of forumtopics">
+		<a routerLink="/normaaluitvoerforumtopic/{{spel.id}}/{{topic.id}}">
+			<span class="badge">{{topic.id}}</span>{{topic.naam}}
+		</a>
+  </li>
+</ul>
+
+<button (click)="terug()">Terug</button>

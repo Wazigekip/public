@@ -1,0 +1,38 @@
+<div class="yellow">
+	Infotopic:
+</div>
+<table class="yellow">
+	<tr>
+		<td>
+			Titel: 
+		</td>
+		<td>
+			<div class="yellow" id="titel">
+			Infotopic
+			</div>
+		</td>
+		<td>
+			<button (click)="copyInputMessage('titel')" value="click to copy" >Copy from Textbox</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Inhoud: 
+		</td>
+		<td>
+			<div class="yellow" id="inhoud">
+			[table]
+			[tr][td][b]Naam[/b][/td][td][b]Inactief[/b][/td][td][b]Dood[/b][/td][/tr]
+			<div *ngFor="let spelspeler of spelspelers">
+			[tr][td]{{spelspeler.speler}}[/td][td]0[/td][td]Nee[/td][/tr]
+			</div>
+			[/table]
+			</div>
+		</td>
+		<td>
+			<button (click)="copyInputMessage('inhoud')" value="click to copy" >Copy from Textbox</button>
+		</td>
+	</tr>
+</table>
+	
+<button (click)="terug()">Terug</button>

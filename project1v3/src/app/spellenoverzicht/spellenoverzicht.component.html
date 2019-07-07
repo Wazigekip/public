@@ -1,0 +1,24 @@
+<p>
+  Spellen overzicht:
+</p>
+<ul class="spellen">
+  <li *ngFor="let spel of spellen">
+		<a *ngIf="spel.variant==1" routerLink="/normaal/{{spel.id}}">
+			<span class="badge">{{spel.id}}</span>{{spel.naam}}
+		</a>
+		<a *ngIf="spel.variant==2" routerLink="/horror/{{spel.id}}">
+			<span class="badge">{{spel.id}}</span>{{spel.naam}}
+		</a>
+  </li>
+</ul>
+
+<input #naamSpel />
+
+<select #variantid>
+	<option *ngFor="let variant of varianten" value={{variant.id}}>{{variant.naam}}</option>
+</select>
+
+<button (click)="nieuwSpel(naamSpel.value,variantid.value); naamSpel.value=''">Nieuw spel</button>
+
+<br><br>
+<button (click)="terug()">Terug</button>

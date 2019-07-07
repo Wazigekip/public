@@ -1,0 +1,28 @@
+<p>
+  De totale spelerslijst
+</p>
+<div>
+  <label>Spelersnaam:
+    <input #spelersNaam />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="addSpeler(spelersNaam.value); spelersNaam.value=''">
+    add
+  </button>
+</div>
+
+<table   width='100%'>
+<div class="spelers" *ngFor="let speler of spelers; let i = index">
+  
+	<tr *ngIf="i % 4 == 0">
+    
+    <td *ngIf="i < spelers.length" width="300"><span class="badge">{{spelers[i].id}}</span> {{spelers[i].naam}}</td>
+    <td *ngIf="i + 1 < spelers.length" width="300"><span class="badge">{{spelers[i+1].id}}</span> {{spelers[i+1].naam}}</td>
+    <td *ngIf="i + 2 < spelers.length" width="300"><span class="badge">{{spelers[i+2].id}}</span> {{spelers[i+2].naam}}</td>
+    <td *ngIf="i + 3 < spelers.length" width="300"><span class="badge">{{spelers[i+3].id}}</span> {{spelers[i+3].naam}}</td>
+  </tr>
+</div>
+</table>
+
+<button (click)="terug()">Terug</button>
+

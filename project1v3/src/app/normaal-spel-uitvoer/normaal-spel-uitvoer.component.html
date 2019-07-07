@@ -1,0 +1,15 @@
+<div class="yellow">
+	<b>Resultaat dag {{dag.dag}}:</b>
+</div>
+
+<div class="yellow" id="inhoud">
+	<p>[b]Resultaat dag {{dag.dag}}:[/b]</p>
+	
+	<p *ngFor="let forumgebeurtenis of forumgebeurtenissen">{{forumgebeurtenis.gebeurtenis}}<p>
+</div>
+	
+
+<button (click)="copyInputMessage('inhoud')" value="click to copy" >Copy from Textbox</button>
+
+<br><br>
+<button (click)="terug()">Terug</button>

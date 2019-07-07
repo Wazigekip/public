@@ -1,0 +1,17 @@
+<p>
+  <b>Invoer krachten {{getRol()}}:</b>
+</p>
+<ul class="spelspelers">
+	<li *ngFor="let lijst of namenlijstkrachten;index as j">
+		<span class="badge">{{j+1}}</span>Doelwit:
+		<select #doelwit (change)="veranderDoelwit(j,doelwit.value)">
+			<option value=""></option>
+			<ng-container *ngFor="let doel of spelspelers;index as k">
+			<option *ngIf="lijst.doelwit==doel.speler" selected value={{doel.speler}}>{{doel.speler}}</option>
+			<option *ngIf="lijst.doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+			</ng-container>
+		</select>
+	</li>
+</ul>
+
+<button (click)="terug()">Terug</button>

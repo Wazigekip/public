@@ -1,0 +1,40 @@
+<table>
+	<div class="yellow" *ngFor="let gebeurtenis of berichtgebeurtenissen;index as i">
+		<br><b>Bericht naar {{gebeurtenis.speler}}:</b>
+		<tr>
+			<td>
+				<b>Ontvanger:</b>
+			</td>
+			<td>
+				<div class="yellow" id="ontvanger{{i}}">{{gebeurtenis.speler}}</div>
+			</td>
+			<td>
+				<button (click)="copyInputMessage('ontvanger'+i)" value="click to copy" >Kopieer ontvanger</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>Onderwerp:</b>
+			</td>
+			<td>
+				<div class="yellow" id="titel{{i}}">{{gebeurtenis.titel}}</div>
+			</td>
+			<td>
+				<button (click)="copyInputMessage('titel'+i)" value="click to copy" >Kopieer onderwerp</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>Inhoud:</b>
+			</td>
+			<td>
+				<div class="yellow" id="inhoud{{i}}">{{gebeurtenis.gebeurtenis}}</div>
+			</td>
+			<td>
+				<button (click)="copyInputMessage('inhoud'+i)" value="click to copy" >Kopieer inhoud</button>
+			</td>
+		</tr>
+	</div>
+</table>
+
+<button (click)="terug()">Terug</button>

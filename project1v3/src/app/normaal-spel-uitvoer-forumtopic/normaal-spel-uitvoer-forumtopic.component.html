@@ -1,0 +1,29 @@
+<div class="yellow">
+	Forumtopic:
+</div>
+<table class="yellow">
+	<tr>
+		<td>
+			Titel: 
+		</td>
+		<td>
+			<textarea rows="1" cols="50" #titel>{{forumtopic.naam}}</textarea>
+		</td>
+		<td>
+			<button (click)="copyInputMessage(titel)" value="click to copy" >Copy from Textbox</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Inhoud: 
+		</td>
+		<td>
+			<textarea rows="10" cols="50" #inhoud>{{forumtopic.inhoud}}</textarea>
+		</td>
+		<td>
+			<button (click)="copyInputMessage(inhoud)" value="click to copy" >Copy from Textbox</button>
+		</td>
+	</tr>
+</table>
+	
+<button (click)="terug()">Terug</button>

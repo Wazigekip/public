@@ -1,0 +1,46 @@
+<p>
+  Stemmen en lunch van dag {{spel.dag}}:
+</p>
+
+<ul class="spelspelers">
+	<li *ngFor="let spelspeler of spelspelers;index as j">
+		<div *ngIf="rolkracht(spelspeler.rol)" class="regel">
+			<a routerLink="/rolkrachtinvoer/{{spel.id}}/{{spelspeler.id}}/{{spel.dag}}/{{spelspeler.rol}}">
+				<span class="badge">{{spelspeler.rol}}</span>{{spelspeler.speler}}
+			</a>
+		</div>
+		<div *ngIf="!rolkracht(spelspeler.rol)" class="regel">
+			<span class="badge">{{spelspeler.rol}}</span>{{spelspeler.speler}}
+		</div>
+		<div *ngIf="spelspeler.speler==spel.burgemeester" class="regel">
+			<a routerLink="/rolkrachtinvoer/{{spel.id}}/{{spelspeler.id}}/{{spel.dag}}/burgemeester">
+				(burgemeester)
+			</a>
+		</div>
+				<select #stem (change)="veranderStem(j,stem.value)">
+					<option *ngIf="stemmen[j].stem==0" value=""></option>
+					<ng-container *ngFor="let doel of stemmen;index as k">
+					<option *ngIf="stemmen[j].stem-1!=k" value={{k+1}}>{{doel.stemmer}}</option>
+					<option *ngIf="stemmen[j].stem-1==k" selected value={{k+1}}>{{doel.stemmer}}</option>
+					</ng-container>
+				</select>
+	</li>
+	<li>
+		<span class="badge">Weerwolven</span>Lunch
+		<select #lunch (change)="veranderLunch(lunch.value)">
+		<option value={{dag.lunch}}>{{dag.lunch}}</option>
+			<ng-container *ngFor="let doel of stemmen">
+			<option *ngIf="dag.lunch!=doel.stemmer" value={{doel.stemmer}}>{{doel.stemmer}}</option>
+			</ng-container>
+		</select>
+	</li>
+</ul>
+
+<div>
+  <button (click)="dagverwerken();">
+    Dag verwerken
+  </button>
+</div>
+
+<br>
+<button (click)="terug()">Terug</button>

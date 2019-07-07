@@ -1,0 +1,18 @@
+<p>
+  <b>Uitvoer voor dag {{getdag()}}:</b>
+</p>
+
+<ul class="uitvoer">
+	<li>
+		<a [routerLink]="getRouterlinkspeltopic()">
+			<span class="badge">-</span>Speltopic
+		</a>
+	</li>
+	<li>
+		<a [routerLink]="getRouterlinkrolberichten()">
+			<span class="badge">-</span>Rolkracht berichten
+		</a>
+	</li>
+</ul>
+
+<button (click)="terug()">Terug</button>
