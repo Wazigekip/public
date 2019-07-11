@@ -1,0 +1,80 @@
+<h2 class="subtitel" id="titel">
+	Infotopic
+</h2>
+
+<div class="container">
+  <div class="wrap">
+		<div class="tekst">
+			<div id="inhoud">
+			<!--
+			<div *ngFor="let regel of infotopicRegels">
+				{{regel}}
+			</div>
+			-->
+			
+			<div class="regel">[table]</div>
+			<div class="regel">[tr][td][b]Naam[/b][/td][td][b]Rol[/b][/td][td][b]Inactief/dood[/b][/td][/tr]</div>
+			<div *ngFor="let spelspeler of spelspelers">
+			<div class="regel"><span class="inregel">[tr][td]</span>
+			<span *ngIf="spelspeler.dood==''&&spelspeler.speler==spel.burgemeester" class="inregel">[b][color=red]{{spelspeler.speler}}[/color][/b]</span>
+			<span *ngIf="spelspeler.dood==''&&spelspeler.speler!=spel.burgemeester" class="inregel">{{spelspeler.speler}}</span>
+			<span *ngIf="spelspeler.dood!=''" class="inregel">[s]{{spelspeler.speler}}[/s]</span>
+			<span class="inregel">[/td][td]{{spelspeler.dood}}[/td][td]</span>
+			<span *ngIf="spelspeler.inactief>3" class="inregel">{{spelspeler.inactief/2}} en ja</span>
+			<span *ngIf="spelspeler.inactief<3" class="inregel">{{spelspeler.inactief}} en nee</span>
+			<span class="inregel">[/td][/tr]</span>
+			</div>
+			</div>
+			<div class="regel">[/table]</div>
+			</div>
+		</div>
+  </div>
+</div>
+
+<div class="buttons">
+<button (click)="copyInputMessage('titel')">Kopieer titel</button>
+<button (click)="copyInputMessage('inhoud')">Kopieer inhoud</button>
+</div>
+<!--
+<table class="yellow">
+	<tr>
+		<td>
+			Titel: 
+		</td>
+		<td>
+			<div class="yellow" id="titel">
+			Infotopic
+			</div>
+		</td>
+		<td>
+			<button (click)="copyInputMessage('titel')" value="click to copy" >Copy from Textbox</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Inhoud: 
+		</td>
+		<td>
+			<div class="yellow" id="inhoud">
+			[table]
+			[tr][td][b]Naam[/b][/td][td][b]Rol[/b][/td][td][b]Inactief/dood[/b][/td][/tr]
+			<div *ngFor="let spelspeler of spelspelers">
+			[tr][td]
+			<span *ngIf="spelspeler.dood==''&&spelspeler.speler==spel.burgemeester">[b][color=red]{{spelspeler.speler}}[/color][/b]</span>
+			<span *ngIf="spelspeler.dood==''&&spelspeler.speler!=spel.burgemeester">{{spelspeler.speler}}</span>
+			<span *ngIf="spelspeler.dood!=''">[s]{{spelspeler.speler}}[/s]</span>
+			[/td][td]{{spelspeler.dood}}[/td][td]
+			<span *ngIf="spelspeler.inactief>3">{{spelspeler.inactief/2}} en ja</span>
+			<span *ngIf="spelspeler.inactief<3">{{spelspeler.inactief}} en nee</span>
+			[/td][/tr]
+			</div>
+			[/table]
+			</div>
+		</td>
+		<td>
+			<button (click)="copyInputMessage('inhoud')" value="click to copy" >Copy from Textbox</button>
+		</td>
+	</tr>
+</table>
+-->
+<button (click)="terug()">Terug</button>

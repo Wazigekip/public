@@ -1,0 +1,89 @@
+<h2 class="subtitel">
+  De totale spelerslijst
+</h2>
+<!--
+<div class="nieuweSpeler">
+  <label><b>Spelersnaam: </b>
+    <input #spelersNaam />
+  </label>
+	<label><b>Profielnummer op www.wakkderdam.nl: </b>
+    <input #id onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+  </label>
+  <button (click)="addSpeler(spelersNaam.value,id.value); spelersNaam.value=''; id.value=''">
+    speler toevoegen
+  </button>
+</div>
+-->
+
+<a class="nieuweSpeler" routerLink="/nieuwespeler">
+	Nieuw speler toevoegen
+</a>
+
+
+<div class="container">
+	<div *ngFor="let speler of spelers" class="wrap">
+		<div class="tekst">
+			<span class="badge">{{speler.id}}</span> {{speler.naam}}
+		</div>
+		<div>
+			<button class="delete" title="delete speler"
+			(click)="deleteSpeler(speler)"><b>X</b></button>
+		</div>
+	</div>
+</div>
+<!--
+<table>
+<div class="spelers" *ngFor="let speler of spelers; let i = index">
+  
+	<tr *ngIf="i % 4 == 0">
+    
+    <td *ngIf="i < spelers.length" width="300">
+			<div class="wrap">
+				<div>
+					<span class="badge">{{spelers[i].id}}</span> {{spelers[i].naam}}
+				</div>
+				<div>
+					<button class="delete" title="delete hero"
+					(click)="deleteSpeler(spelers[i])"><b>X</b></button>
+				</div>
+			</div>
+		</td>
+    <td *ngIf="i + 1 < spelers.length" width="300">
+			<div class="wrap">
+				<div>
+					<span class="badge">{{spelers[i+1].id}}</span> {{spelers[i+1].naam}}
+				</div>
+				<div>
+					<button class="delete" title="delete hero"
+					(click)="deleteSpeler(spelers[i+1])"><b>X</b></button>
+				</div>
+			</div>
+		</td>
+    <td *ngIf="i + 2 < spelers.length" width="300">
+			<div class="wrap">
+				<div>
+					<span class="badge">{{spelers[i+2].id}}</span> {{spelers[i+2].naam}}
+				</div>
+				<div>
+					<button class="delete" title="delete hero"
+					(click)="deleteSpeler(spelers[i+2])"><b>X</b></button>
+				</div>
+			</div>
+		</td>
+    <td *ngIf="i + 3 < spelers.length" width="300">
+			<div class="wrap">
+				<div>
+					<span class="badge">{{spelers[i+3].id}}</span> {{spelers[i+3].naam}}
+				</div>
+				<div>
+					<button class="delete" title="delete hero"
+					(click)="deleteSpeler(spelers[i+3])"><b>X</b></button>
+				</div>
+			</div>
+		</td>
+  </tr>
+</div>
+</table>
+-->
+<button (click)="terug()">Terug</button>
+

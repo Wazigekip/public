@@ -1,0 +1,29 @@
+<h2 class="subtitel">
+	Dodentopic dag {{dag}} van {{id}}
+</h2>
+
+<div class="container">
+  <div class="wrap">
+		<div class="tekst">
+			<div id="inhoud">
+				<p>[b]Dag {{dag}}:[/b]</p>
+				<div *ngFor="let gebeurtenis of gebeurtenissen">{{gebeurtenis.gebeurtenis}}</div>
+			</div>
+		</div>
+  </div>
+</div>
+
+<div class="buttons">
+	<button (click)="copyInputMessage('inhoud')">Kopieer inhoud</button>
+</div>
+<!--
+<div class="yellow" id="inhoud">
+<div *ngFor="let gebeurtenis of gebeurtenissen">{{gebeurtenis.gebeurtenis}}</div>
+</div>
+
+<br>
+<button (click)="copyInputMessage('inhoud')" value="click to copy" >Kopieer inhoud</button>
+
+<br><br>
+-->
+<button (click)="terug()">Terug</button>

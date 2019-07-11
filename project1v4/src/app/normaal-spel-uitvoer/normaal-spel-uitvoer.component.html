@@ -1,0 +1,31 @@
+<h2 class="subtitel">
+	Resultaat dag {{dag.dag}} van {{spel.id}}
+</h2>
+
+<div class="container">
+  <div class="wrap">
+		<div class="tekst">
+			<div id="inhoud">
+				<p>[b]Resultaat dag {{dag.dag}}:[/b]</p>
+				<p *ngFor="let forumgebeurtenis of forumgebeurtenissen">{{forumgebeurtenis.gebeurtenis}}</p>
+			</div>
+		</div>
+  </div>
+</div>
+
+<div class="buttons">
+	<button (click)="copyInputMessage('inhoud')">Kopieer inhoud</button>
+</div>
+<!--
+<div class="yellow" id="inhoud">
+	<p>[b]Resultaat dag {{dag.dag}}:[/b]</p>
+	
+	<p *ngFor="let forumgebeurtenis of forumgebeurtenissen">{{forumgebeurtenis.gebeurtenis}}<p>
+</div>
+	
+
+<button (click)="copyInputMessage('inhoud')" value="click to copy" >Copy from Textbox</button>
+
+<br><br>
+-->
+<button (click)="terug()">Terug</button>

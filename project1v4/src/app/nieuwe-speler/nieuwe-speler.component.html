@@ -1,0 +1,30 @@
+<h2 class="subtitel">
+  Nieuwe speler toevoegen
+</h2>
+
+<div class="container">
+  <div class="containerItem">
+		<div class="tekst">
+		<b>Naam:</b>
+		</div>
+		<div>
+			<input #naam/>
+		</div>
+	</div>
+  <div class="containerItem">
+		<div class="tekst">
+			<b>Profielnummer:</b>
+		</div>
+		<div>
+			<input #profielnummer onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+		</div>
+	</div>  
+</div>
+
+<div>
+	<button (click)="nieuweSpelerToevoegen(naam.value,profielnummer.value)">
+		Nieuwe speler toevoegen
+	</button>
+</div>
+
+<button (click)="terug()">Terug</button>

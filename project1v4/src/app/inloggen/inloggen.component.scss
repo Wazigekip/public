@@ -1,0 +1,104 @@
+.inloggen {
+	color: #ff0;
+	text-decoration: none;
+	border: 0.25em solid #ff0;
+	font-size: 1em;
+	padding: 0.75em;
+	margin: 0.5em;
+	border-radius: 1em;
+	background-color: #333;
+	display: inline-block;
+}
+
+.inloggen:hover {
+	background-color: #bbb;
+	border: 0.25em solid #f00;
+	color: #f00;
+}
+
+.container {
+	color: #ff0;
+	display: grid;
+	grid-gap: 0.5em;
+	margin: 0.5em;
+	width: 10em;
+	grid-template-columns: auto;
+	.wrap{
+		border: 0.25em solid #ff0;
+		background-color:#333;
+		padding: 0;
+		border-radius: 1em;
+		display: flex;
+		.tekst{
+			padding: 0.75em;
+			a{
+				text-decoration: none;
+				color: #ff0;
+			}
+		}
+		div{
+			padding: 0.65em;
+			span{
+				background-color:#777;
+				color: #008;
+				padding: 0.775em 0.775em 0.775em 0.775em;
+				margin: 0 0.75em 0 -0.75em;
+				border-radius: 0.7em 0 0 0.7em;
+			}
+			select{
+				font-size: 1em;
+				width: 10.9em;
+				border-radius: 0 0.7em 0.7em 0;
+				margin: 0;
+				padding: 0em;
+			}
+			input{
+				border-radius: 0 0.7em 0.7em 0;
+				font-size: 1em;
+			}
+		}
+		div:last-child{
+			margin-left: auto;
+		}
+	}
+}
+
+.container2 {
+	display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0.5em;
+  width: 10em;
+	color: #ff0;
+	margin: 0.5em;
+	.wrap {
+		border: 0.25em solid #ff0;
+		padding: 0.75em;
+		border-radius: 1em;
+		background-color: #333;
+		display: flex;
+		vertical-align: middle;
+		.tekst {
+			margin: 0.5em;
+		}
+		div{
+			select {
+				width: 12.5em;
+				font-size: 1em;
+			}
+			input {
+				width: 12em;
+				font-size: 1em;
+			}
+		}
+		div:last-child {
+			margin-left: auto;
+		}
+	}
+}
+
+
+
+
+
+
+

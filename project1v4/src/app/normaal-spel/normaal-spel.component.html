@@ -1,0 +1,29 @@
+<h2 class="subtitel">
+  Mogelijke acties in spel {{spel.id}}
+</h2>
+
+<div class="container">
+	<div>
+		<a routerLink="/spelspelerslijst/{{spel.id}}">
+			<div>
+				Spelerlijst
+			</div>
+		</a>
+	</div>
+	<div *ngIf="spel.dag>0">
+		<a routerLink="/normaalinvoer/{{spel.id}}/{{aantalspelers}}">
+			<div>
+				Invoeracties
+			</div>
+		</a>
+	</div>
+	<div>
+		<a routerLink="/normaaluitvoeroverzicht/{{spel.id}}">
+			<div>
+				Uitvoeracties
+			</div>
+		</a>
+	</div>
+</div>
+
+<button (click)="terug()">Terug</button>

@@ -1,0 +1,38 @@
+.container {
+	color: #ff0;
+	display: grid;
+	grid-gap: 0.5em;
+	margin: 0.5em;
+	width: 13em;
+  grid-template-columns: auto;
+	div{
+		a{
+			text-decoration: none;
+			color: #ff0;
+			div{
+				border: 0.25em solid #ff0;
+				padding: 0.75em;
+				border-radius: 1em;
+				background-color:#333;
+				span{
+					color: #008;
+					background-color:#777;
+					margin: 0 0.75em 0 -0.75em;
+					padding: 0.775em;
+					border-radius: 0.7em 0 0 0.7em;
+				}
+			}
+		}
+		a:hover{
+			div{
+				border: 0.25em solid #f00;
+				background-color:#bbb;
+				color: #f00;
+				span{
+					background-color:#333;
+					color: #088;
+				}
+			}
+		}
+	}
+}

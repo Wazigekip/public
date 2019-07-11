@@ -1,0 +1,46 @@
+.container {
+	color: #ff0;
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 0.5em;
+	margin: 0.5em;
+	grid-template-columns: auto auto auto auto;
+	.wrap{
+		padding: 0;
+		border-radius: 1em;
+		display: flex;
+		.wrap2{
+			.tekst{
+				border: 0.25em solid #ff0;
+				background-color:#333;
+				padding: 0.75em;
+				margin: 0.5em;
+				border-radius: 1em;
+			}
+			div{
+				span.ontvanger{
+					background-color:#777;
+					color: #008;
+					padding: 0.775em;
+					margin: 0 0.75em 0 -0.75em;
+					border-radius: 0.7em 0 0 0.7em;
+				}
+				button{
+					border: 0.25em solid #ff0;
+					border-radius: 1em;
+					background-color:#333;
+					margin: 0.5em;
+					color: #ff0;
+				}
+				button:hover{
+					border: 0.25em solid #f00;
+					color: #f00;
+					background-color:#bbb;
+				}
+			}
+			div:last-child{
+				margin-left: auto;
+			}
+		}
+	}
+}

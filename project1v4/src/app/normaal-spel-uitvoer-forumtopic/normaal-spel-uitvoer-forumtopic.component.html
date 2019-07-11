@@ -1,0 +1,20 @@
+<h2 class="subtitel" id="titel">
+	{{forumtopic.naam}}
+</h2>
+
+<div class="container">
+  <div class="wrap">
+		<div class="tekst">
+			<div id="inhoud">
+				{{forumtopic.inhoud}}
+			</div>
+		</div>
+  </div>
+</div>
+
+<div class="buttons">
+<button (click)="copyInputMessage('titel')">Kopieer titel</button>
+<button (click)="copyInputMessage('inhoud')">Kopieer inhoud</button>
+</div>
+	
+<button (click)="terug()">Terug</button>

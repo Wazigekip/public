@@ -1,0 +1,29 @@
+<h2 class="subtitel">
+  Uitvoer van spel {{spel.id}} voordat het spel begint
+</h2>
+
+<div class="container">
+	<div>
+		<a routerLink="/rolberichtenuitvoer/{{spel.id}}/0/{{aantalBerichten}}">
+			<div>
+				Rolberichten
+			</div>
+		</a>
+	</div>
+	<div>
+		<a routerLink="/infotopicuitvoer/{{spel.id}}">
+			<div>
+				Infotopic
+			</div>
+		</a>
+	</div>
+	<div *ngFor="let topic of forumtopics">
+		<a routerLink="/normaaluitvoerforumtopic/{{spel.id}}/{{topic.id}}">
+			<div>
+				{{topic.naam}}
+			</div>
+		</a>
+	</div>
+</div>
+
+<button (click)="terug()">Terug</button>

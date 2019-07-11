@@ -1,0 +1,69 @@
+<h2 class="subtitel">
+  Inloggen spelleider
+</h2>
+
+<div class="container">
+  <div class="wrap">
+		<div class="tekst">
+			<b>Spelleider:</b>
+		</div>
+		<div>
+		<select #spelLeider (change)="veranderSpelleider(spelLeider.value)">
+			<ng-container *ngFor="let leider of spelleiders;index as i">
+				<option *ngIf="leider.id!=spelleider" value={{leider.id}}>{{leider.naam}}</option>
+				<option *ngIf="leider.id==spelleider" selected value={{leider.id}}>{{leider.naam}}</option>
+			</ng-container>
+		</select>
+		</div>
+	</div>
+  <div class="wrap">
+		<div class="tekst">
+			<b>Wachtwoord:</b>
+		</div>
+		<div>
+			<input #wachtwoord/>
+		</div>
+	</div>  
+</div>
+
+<a routerLink="/spellenoverzicht/{{spelleiderIndex}}" class="inloggen">
+	Inloggen
+</a>
+
+<!--
+<br><br>
+
+
+<table>
+<tr><td>
+	<b>Spelleider: </b>
+	</td><td>
+	<select #spelleid (change)="veranderSpelleider(spelleid.value)">
+		<ng-container *ngFor="let leider of spelleiders;index as i">
+			<option *ngIf="leider.id!=spelleider" value={{leider.id}}>{{leider.naam}}</option>
+			<option *ngIf="leider.id==spelleider" selected value={{leider.id}}>{{leider.naam}}</option>
+		</ng-container>
+	</select>
+	</td></tr>
+	<tr><td>
+		<b>Wachtwoord: </b>
+	</td><td>
+		<input #wachtwoord />
+	</td></tr>
+	
+</table>
+
+
+		<a routerLink="/spellenoverzicht/{{spelleiderIndex}}">
+			Inloggen
+		</a>
+	
+
+<ul class="spelleiders">
+  <li *ngFor="let spelleider of spelleiders">
+		<a routerLink="/spellenoverzicht/{{spelleider.id}}">
+			<span class="badge">{{spelleider.id}}</span>{{spelleider.naam}}
+		</a>
+  </li>
+</ul>
+-->

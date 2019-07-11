@@ -1,0 +1,26 @@
+<h2 class="subtitel">
+  Spellen overzicht van spelleider {{spelleider.naam}}
+</h2>
+
+<div class="container">
+	<div *ngFor="let spel of spellen">
+		<a *ngIf="spel.variant==1" routerLink="/normaal/{{spel.id}}">
+			<div>
+				<span class="badge">{{spel.id}}</span>{{spel.naam}}
+			</div>
+		</a>
+		<a *ngIf="spel.variant==2" routerLink="/horror/{{spel.id}}">
+			<div>
+				<span class="badge">{{spel.id}}</span>{{spel.naam}}
+			</div>
+		</a>
+	</div>
+</div>
+
+<div class="nieuwSpelContainer">
+	<a class="nieuwSpel" routerLink="/nieuwspel/{{spelleider.id}}">
+		Nieuw spel maken
+	</a>
+</div>
+
+<button (click)="terug()">Terug</button>

@@ -1,0 +1,34 @@
+<h2 class="subtitel">
+  Nieuw spel maken voor spelleider {{spelleider.naam}}
+</h2>
+
+<div class="container">
+  <div class="containerItem">
+		<div class="tekst">
+			<b>Naam spel:</b>
+		</div>
+		<div>
+			<input #naamSpel/>
+		</div>
+	</div>
+  <div class="containerItem">
+		<div class="tekst">
+			<b>Variant:</b>
+		</div>
+		<div>
+			<select #variantSpel>
+				<ng-container *ngFor="let variant of varianten;index as i">
+					<option value={{variant.id}}>{{variant.naam}}</option>
+				</ng-container>
+			</select>
+		</div>
+	</div>  
+</div>
+
+<div>
+	<button (click)="nieuwSpelMaken(naamSpel.value,variantSpel.value)">
+		Nieuw spel maken
+	</button>
+</div>
+
+<button (click)="terug()">Terug</button>

@@ -1,0 +1,66 @@
+<h2 class="subtitel">
+  Spelers van spel {{spel.id}}
+</h2>
+
+<div *ngIf="spel.dag==0" class="nieuweSpeler">
+	<div>
+		<label><b>Naam:</b>
+			<input #spelerNaam />
+		</label>
+	</div>
+	<button (click)="addSpelspeler(spelerNaam.value); spelerNaam.value='';">
+		speler toevoegen
+	</button>
+</div>
+
+<div class="container">
+  <div *ngFor="let spelspeler of spelspelers;index as j" class="wrap">
+		<div *ngIf="spel.dag>0" class="tekst">
+			<span class="badge">{{spelspeler.rol}}</span>{{spelspeler.speler}}
+		</div>
+		<div *ngIf="spel.dag==0" class="tekst">
+			<span class="badge">-</span>{{spelspeler.speler}}
+		</div>
+		<div *ngIf="spelspeler.dood!=''" class="tekst">
+			(dood)
+		</div>
+		<div *ngIf="spel.dag==0">
+			<select *ngIf="spel.dag==0" #i (change)="veranderRol(j,i.value)">
+				<ng-container *ngFor="let rol of rollen;index as k">
+				<option *ngIf="spelspeler.rol!=rol.naam" value={{rol.naam}}>{{rol.naam}}</option>
+				<option *ngIf="spelspeler.rol==rol.naam" selected value={{rol.naam}}>{{rol.naam}}</option>
+				</ng-container>
+			</select>
+		</div>
+		<div *ngIf="spel.dag>0">
+		</div>
+  </div>
+</div>
+
+<!--
+<ul class="spelspelers">
+  <li *ngFor="let spelspeler of spelspelers;index as j">
+		<div *ngIf="spel.dag>0">
+			<span class="badge">{{spelspeler.rol}}</span>{{spelspeler.speler}}
+			<span *ngIf="spelspeler.dood>0">(dood)</span>
+		</div>
+		<div *ngIf="spel.dag==0">
+			<span class="badge">-</span>{{spelspeler.speler}}
+			<select *ngIf="spel.dag==0" #i (change)="veranderRol(j,i.value)">
+				<ng-container *ngFor="let rol of rollen;index as k">
+				<option *ngIf="spelspeler.rol==rol.naam" selected value={{rol.naam}}>{{rol.naam}}</option>
+				<option *ngIf="spelspeler.rol!=rol.naam" value={{rol.naam}}>{{rol.naam}}</option>
+				</ng-container>
+			</select>
+		</div>
+  </li>
+</ul>
+-->
+
+<div *ngIf="spel.dag==0">
+  <button (click)="bevestig();">
+    Spelerslijst bevestigen
+  </button>
+</div>
+
+<button (click)="terug()">Terug</button>

@@ -1,0 +1,65 @@
+<h2 class="subtitel">
+  Invoer krachten {{rol}}
+</h2>
+<!--
+<ul class="spelspelers">
+	<li *ngFor="let lijst of namenlijstkrachten;index as j">
+		<span class="badge">{{j+1}}</span>Doelwit:
+		<select #doelwit (change)="veranderDoelwit(j,doelwit.value)">
+			<option value=""></option>
+			<ng-container *ngFor="let doel of spelspelers;index as k">
+			<option *ngIf="lijst.doelwit==doel.speler" selected value={{doel.speler}}>{{doel.speler}}</option>
+			<option *ngIf="lijst.doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+			</ng-container>
+		</select>
+	</li>
+</ul>
+-->
+<!--
+<ul class="spelspelers">
+	<li *ngFor="let lijst of namenlijstkrachten;index as j">
+		<span class="badge">{{j+1}}</span>Doelwit:
+		<select #doelwit (change)="veranderDoelwit(j,doelwit.value)">
+			<option *ngIf="lijst.doelwit==''" value=''></option>
+			<option *ngIf="lijst.doelwit!=''" selected value="{{lijst.doelwit}}">{{lijst.doelwit}}</option>
+			<ng-container *ngFor="let doel of spelspelers;index as k">
+			<option *ngIf="lijst.doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+			</ng-container>
+			<option *ngIf="lijst.doelwit!=''" value=''></option>
+		</select>
+	</li>
+</ul>
+-->
+
+<div class="container">
+	<div *ngFor="let lijst of namenlijstkrachten;index as i" class="wrap">
+		<div class="tekst">
+			<span class="badge">{{rol}}</span>Doelwit:
+		</div>
+		<div>
+			<select #doelwit (change)="veranderDoelwit(i,doelwit.value)">
+				<option value=''></option>
+				<ng-container *ngFor="let doel of spelspelers">
+					<option *ngIf="namenlijstkrachten[i].doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+					<option *ngIf="namenlijstkrachten[i].doelwit==doel.speler" selected value={{doel.speler}}>{{doel.speler}}</option>
+				</ng-container>
+			</select>
+		</div>
+	</div>
+</div>
+<!--
+<ul class="spelspelers">
+	<li *ngFor="let lijst of namenlijstkrachten;index as j">
+		<span class="badge">{{j+1}}</span>Doelwit:
+		<select #doelwit (change)="veranderDoelwit(j,doelwit.value)">
+			<option value=''></option>
+			<ng-container *ngFor="let doel of spelspelers;index as k">
+			<option *ngIf="namenlijstkrachten[j].doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+			<option *ngIf="namenlijstkrachten[j].doelwit==doel.speler" selected value={{doel.speler}}>{{doel.speler}}</option>
+			</ng-container>
+		</select>
+	</li>
+</ul>
+-->
+
+<button (click)="terug()">Terug</button>

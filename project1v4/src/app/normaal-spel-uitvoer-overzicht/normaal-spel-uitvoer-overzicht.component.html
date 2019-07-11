@@ -1,0 +1,22 @@
+<h2 class="subtitel">
+  Uitvoer voor spel {{spel.id}}
+</h2>
+
+<div class="container">
+	<div>
+		<a routerLink="/normaaluitvoerbegin/{{spel.id}}">
+			<div>
+				Voordat het spel begint
+			</div>
+		</a>
+	</div>
+	<div *ngFor="let dag of dagen">
+		<a routerLink="/normaaluitvoerdagoverzicht/{{spel.id}}/{{dag.dag}}">
+			<div>
+				Dag {{dag.dag}}
+			</div>
+		</a>
+	</div>
+</div>
+
+<button (click)="terug()">Terug</button>

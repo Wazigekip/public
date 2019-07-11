@@ -1,0 +1,55 @@
+<h2 class="subtitel">
+  Uitvoer voor dag {{dag}} van spel {{id}}
+</h2>
+
+<div class="container">
+	<div *ngIf="aantalBerichten>0">
+		<a routerLink="/rolberichtenuitvoer/{{id}}/{{dag}}/{{aantalBerichten}}">
+			<div>
+				Rolkracht berichten
+			</div>
+		</a>
+	</div>
+	<div>
+		<a routerLink="/normaaluitvoer/{{id}}/{{dag}}">
+			<div>
+				Speltopic
+			</div>
+		</a>
+	</div>
+	<div>
+		<a routerLink="/infotopicuitvoer/{{id}}">
+			<div>
+				Infotopic
+			</div>
+		</a>
+	</div>
+	<div>
+		<a routerLink="/dodentopicuitvoer/{{id}}/{{dag}}">
+			<div>
+				Dodentopic
+			</div>
+		</a>
+	</div>
+</div>
+
+<!--
+<ul class="uitvoer">
+	<li>
+		<a [routerLink]="getRouterlinkspeltopic()">
+			<span class="badge">-</span>Speltopic
+		</a>
+	</li>
+	<li>
+		<a [routerLink]="getRouterlinkrolberichten()">
+			<span class="badge">-</span>Rolkracht berichten
+		</a>
+	</li>
+	<li>
+		<a [routerLink]="getRouterlinkDodentopic()">
+			<span class="badge">-</span>Dodentopic
+		</a>
+	</li>
+</ul>
+-->
+<button (click)="terug()">Terug</button>

@@ -1,0 +1,62 @@
+<h2 class="subtitel">
+  Rolkracht berichten dag {{dag}} van spel {{spel.id}}
+</h2>
+
+<div class="container">
+	<div *ngFor="let gebeurtenis of berichtgebeurtenissen;index as i" class="wrap">
+		<div class="wrap2">
+			<div class="tekst">
+				<span class="ontvanger">{{gebeurtenis.speler}}</span><span id="titel{{i}}">{{gebeurtenis.titel}}</span>
+			</div>
+			<div class="tekst" id="inhoud{{i}}">
+				{{gebeurtenis.gebeurtenis}}
+			</div>
+			<div>
+				<button (click)="openBericht(i)">Open bericht</button>
+				<button (click)="copyInputMessage('inhoud'+i)" value="click to copy" >Kopieer inhoud</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<table>
+	<div class="yellow" *ngFor="let gebeurtenis of berichtgebeurtenissen;index as i">
+		<br><b>Bericht naar {{gebeurtenis.speler}}:</b>
+		<tr>
+			<td>
+				<b>Ontvanger:</b>
+			</td>
+			<td>
+				<div class="yellow" id="ontvanger{{i}}">{{gebeurtenis.speler}}</div>
+			</td>
+			<td>
+				<button (click)="openBericht(i)">Open bericht en kopieer onderwerp</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>Onderwerp:</b>
+			</td>
+			<td>
+				<div class="yellow" id="titel{{i}}">{{gebeurtenis.titel}}</div>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>Inhoud:</b>
+			</td>
+			<td>
+				<div class="yellow" id="inhoud{{i}}">{{gebeurtenis.gebeurtenis}}</div>
+			</td>
+			<td>
+				<button (click)="copyInputMessage('inhoud'+i)" value="click to copy" >Kopieer inhoud</button>
+			</td>
+		</tr>
+	</div>
+</table>
+-->
+
+<button (click)="terug()">Terug</button>

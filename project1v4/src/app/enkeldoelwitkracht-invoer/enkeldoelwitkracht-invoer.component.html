@@ -1,0 +1,38 @@
+<h2 class="subtitel">
+  Invoer krachten {{spelspeler.rol}}
+</h2>
+
+<div class="container">
+	<div class="wrap">
+		<div class="tekst">
+			<span class="badge">{{spelspeler.rol}}</span>Doelwit:
+		</div>
+		<div>
+			<select #doelwit (change)="veranderDoelwit(doelwit.value)">
+				<option value=''></option>
+				<ng-container *ngFor="let doel of spelspelers;index as k">
+				<option *ngIf="(!enkeldoelwitkracht)||enkeldoelwitkracht.doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+				<option *ngIf="enkeldoelwitkracht&&enkeldoelwitkracht.doelwit==doel.speler" selected value={{doel.speler}}>{{doel.speler}}</option>
+				</ng-container>
+				
+			</select>
+		</div>
+	</div>
+</div>
+<!--
+<ul class="spelspelers">
+	<li>
+		<span class="badge">-</span>Doelwit:
+		<select #doelwit (change)="veranderDoelwit(doelwit.value)">
+		<option *ngIf="!enkeldoelwitkracht" value=''></option>
+			<option *ngIf="enkeldoelwitkracht" selected value={{enkeldoelwitkracht.doelwit}}>{{enkeldoelwitkracht.doelwit}}</option>
+			<ng-container *ngFor="let doel of spelspelers;index as k">
+			<option *ngIf="(!enkeldoelwitkracht)||enkeldoelwitkracht.doelwit!=doel.speler" value={{doel.speler}}>{{doel.speler}}</option>
+			</ng-container>
+			<option *ngIf="enkeldoelwitkracht&&enkeldoelwitkracht.doelwit!=''" value=''></option>
+		</select>
+	</li>
+</ul>
+-->
+
+<button (click)="terug()">Terug</button>
