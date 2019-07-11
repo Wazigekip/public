@@ -21,6 +21,9 @@ import { NamenlijstkrachtService } from '../namenlijstkracht.service';
 import { Spelspeler } from '../spelspeler';
 import { SpelspelerService } from '../spelspeler.service';
 
+import { Berichtgebeurtenis } from '../berichtgebeurtenis';
+import { BerichtgebeurtenisService } from '../berichtgebeurtenis.service';
+
 @Component({
   selector: 'app-spelspelerslijst',
   templateUrl: './spelspelerslijst.component.html',
@@ -40,7 +43,8 @@ export class SpelspelerslijstComponent implements OnInit {
 		private stemService: StemService,
 		private rolService: RolService,
 		private dagService: DagService,
-		private namenlijstkrachtService: NamenlijstkrachtService
+		private namenlijstkrachtService: NamenlijstkrachtService,
+     private berichtgebeurtenisService: BerichtgebeurtenisService,
 	) { }
 
   ngOnInit() {
