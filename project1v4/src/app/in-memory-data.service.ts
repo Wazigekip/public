@@ -53,8 +53,7 @@ export class InMemoryDataService implements InMemoryDbService {
 			{ id: 16, spel: 2, speler: 'Karel', rol: 'weerwolf', dood: '', inactief: 0}
 		];
 		const dagen = [
-			{ id: 1, spel: 1, dag: 1, lynch: '', lunch: '' },
-			{ id: 2, spel: 2, dag: 2, lynch: 'Jim', lunch: 'Dirk' }
+			{ id: 1, spel: 1, dag: 1, lynch: '', lunch: '' }
 		];
 		const forumtopics = [
 			{ id: 1, variant: 1, naam: 'Discussietopic', inhoud: 'Wie is de wolf?'},
@@ -77,8 +76,7 @@ export class InMemoryDataService implements InMemoryDbService {
 			{id: 5, spel: 1, stemmer: 'Fred', stem: 0, dag: 1},
 			{id: 6, spel: 1, stemmer: 'Hans', stem: 0, dag: 1},
 			{id: 7, spel: 1, stemmer: 'Jim', stem: 0, dag: 1},
-			{id: 8, spel: 1, stemmer: 'Karel', stem: 0, dag: 1},
-			{id: 9, spel: 9, stemmer: 'Jim', stem: 0, dag: 2}
+			{id: 8, spel: 1, stemmer: 'Karel', stem: 0, dag: 1}
 		];
 		const gebeurtenissen = [
 			{ id: 1, spel: 7, dag: 1, gebeurtenis: ''},
