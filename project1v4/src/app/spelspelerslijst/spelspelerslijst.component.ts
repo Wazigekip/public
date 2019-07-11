@@ -148,6 +148,8 @@ export class SpelspelerslijstComponent implements OnInit {
 			
 			this.spelspelerService.updateSpelspeler(spelspeler)
       .subscribe();
+      let berichtgebeurtenis=new Berichtgebeurtenis(this.spel.id,0,spelspeler.speler,this.spel.id+' rol','Hallo '+spelspeler.speler+'. Je bent een '+spelspeler.rol+' in dit spel.');
+			this.berichtgebeurtenisService.addBerichtgebeurtenis(berichtgebeurtenis as Berichtgebeurtenis).subscribe();
 		}
 	}
 	
