@@ -3,14 +3,14 @@
 </h2>
 
 <div class="container">
-	<div>
+	<div *ngIf="spel.dag>0">
 		<a routerLink="/rolberichtenuitvoer/{{spel.id}}/0/{{aantalBerichten}}">
 			<div>
 				Rolberichten
 			</div>
 		</a>
 	</div>
-	<div>
+	<div *ngIf="spel.dag>0">
 		<a routerLink="/infotopicuitvoer/{{spel.id}}">
 			<div>
 				Infotopic
