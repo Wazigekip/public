@@ -1,0 +1,31 @@
+<app-sub-title [subTitle]="subTitle"></app-sub-title>
+
+<div class='container'>
+  <div class='wrap'>
+		<div class='text'>
+			Gameleader:
+		</div>
+		<div>
+		<select #gameLeaderInput (change)="changeGameLeader(gameLeaderInput.value)">
+			<ng-container *ngFor="let gameLeader of gameLeaders;index as i">
+				<option *ngIf="gameLeader.id!=gameLeaderId" value={{gameLeader.id}}>{{gameLeader.name}}</option>
+				<option *ngIf="gameLeader.id==gameLeaderId" selected value={{gameLeader.id}}>{{gameLeader.name}}</option>
+			</ng-container>
+		</select>
+		</div>
+	</div>
+  <div class='wrap'>
+		<div class='text'>
+			Password:
+		</div>
+		<div>
+			<input #passWordInput/>
+		</div>
+	</div>  
+</div>
+
+<div>
+	<a routerLink='/gamesoverview/{{gameLeaderId}}' class='loginButton'>
+		Login
+	</a>
+</div>

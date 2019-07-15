@@ -1,0 +1,26 @@
+<app-sub-title [subTitle]="subTitle"></app-sub-title>
+
+<div class="container">
+  <div class="wrap">
+		<div class="text">
+			Name:
+		</div>
+		<div>
+			<input #nameInput/>
+		</div>
+	</div>
+  <div class="wrap">
+		<div class="text">
+			ProfileNumber:
+		</div>
+		<div>
+			<input #profileNumberInput onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+		</div>
+	</div>  
+</div>
+
+<div>
+	<button (click)="addNewPlayer(nameInput.value,profileNumberInput.value)">
+		Add new player
+	</button>
+</div>

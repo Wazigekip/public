@@ -1,0 +1,23 @@
+.container{
+	display: inline-block;
+	.wrap{
+		margin: 0.5em;
+		a{
+			text-decoration: none;
+			.text{
+				color: #ff0;
+				border: 0.25em solid #ff0;
+				background-color:#333;
+				padding: 0.75em;
+				border-radius: 1em;
+			}
+		}
+		a:hover{
+			.text{
+				color: #f00;
+				border-color: #f00;
+				background-color:#bbb;
+			}
+		}
+	}
+}

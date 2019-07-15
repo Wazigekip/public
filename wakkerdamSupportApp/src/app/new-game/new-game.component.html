@@ -1,0 +1,18 @@
+<app-sub-title [subTitle]="subTitle"></app-sub-title>
+
+<div class="container">
+  <div class="wrap">
+		<div class="text">
+			Game name:
+		</div>
+		<div>
+			<input #gameNameInput/>
+		</div>
+	</div> 
+</div>
+
+<div>
+	<button (click)="makeNewGame(gameNameInput.value)">
+		Make new game
+	</button>
+</div>

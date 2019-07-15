@@ -1,0 +1,18 @@
+.container{
+	margin: 0.5em;
+	display: inline-block;
+	.wrap{
+		padding: 0.75em;
+		border-radius: 1em;
+		background-color: #333;
+		border: 0.25em solid #ff0;
+		div{
+			display: inline;
+			input{
+				font-size: 1em;
+				color: #ff0;
+				background-color: #000;
+			}
+		}
+	}
+}

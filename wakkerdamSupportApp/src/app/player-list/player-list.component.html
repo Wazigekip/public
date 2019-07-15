@@ -1,0 +1,21 @@
+<app-sub-title [subTitle]="subTitle"></app-sub-title>
+
+<div>
+	<a class="addNewPlayerButton" routerLink="/newplayer">
+		Add new player
+	</a>
+</div>
+
+<div class="container">
+	<div *ngFor="let player of players" class="wrap">
+		<div class="text">
+			<span>{{player.id}}</span>{{player.name}}
+		</div>
+		
+		<div>
+			<button class="deleteButton" title="delete player"
+			(click)="deletePlayer(player.id)"><b>X</b></button>
+		</div>
+		
+	</div>
+</div>

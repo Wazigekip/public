@@ -1,0 +1,25 @@
+<app-sub-title [subTitle]="subTitle"></app-sub-title>
+
+<div class="container">
+	<div class="wrap">
+		<a routerLink="/gameplayerlist/{{game.id}}">
+			<div class="text">
+				Playerlist
+			</div>
+		</a>
+	</div>
+	<div *ngIf="game.day>0" class="wrap">
+		<a routerLink="/gameinput/{{game.id}}">
+			<div class="text">
+				Input actions
+			</div>
+		</a>
+	</div>
+	<div class="wrap">
+		<a routerLink="/gameoutputoverview/{{game.id}}">
+			<div class="text">
+				Output actions
+			</div>
+		</a>
+	</div>
+</div>

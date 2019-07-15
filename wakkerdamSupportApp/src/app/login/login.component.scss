@@ -1,0 +1,45 @@
+.container{
+	display: inline-block;
+	.wrap{
+		padding: 0.75em;
+		border: 0.25em solid #ff0;
+		background-color: #333;
+		border-radius: 1em;
+		margin: 0.5em;
+		display: block;
+		.text{
+			margin-right: 1em;
+		}
+		div{
+			display: inline;
+			select{
+				background-color: #000;
+				color: #ff0;
+				font-size: 1em;
+			}
+			input{
+				background-color: #000;
+				color: #ff0;
+				font-size: 1em;
+			}
+		}
+		
+	}
+}
+
+.loginButton{
+	color: #ff0;
+	text-decoration: none;
+	border: 0.25em solid #ff0;
+	padding: 0.75em;
+	background-color: #333;
+	margin: 0.5em;
+	border-radius: 1em;
+	display: inline-block;
+}
+
+.loginButton:hover{
+	color: #f00;
+	background-color: #bbb;
+	border-color: #f00;
+}

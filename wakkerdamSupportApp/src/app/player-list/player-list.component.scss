@@ -1,0 +1,64 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 0.5em;
+	margin: 0.5em;
+	.wrap{
+		background-color: #333;
+		border: 0.25em solid #ff0;
+		border-radius: 1em;
+		.text{
+				span{
+					background-color: #777;
+					color: #008;
+					padding: 0.75em;
+					margin-right: 0.5em;
+					border-radius: 0.7em;
+				}
+			}
+		div{
+			display: inline;
+			button{
+				border: 0;
+				background-color: #bbb;
+				color: #f00;
+				margin: 0;
+				border-radius: 0.7em;
+				padding: 0.75em;
+			}
+		}
+	}
+	.wrap:hover{
+		color: #f00;
+		background-color: #bbb;
+		border-color: #f00;
+		.text{
+			span{
+				background-color: #333;
+				color: #088;
+			}
+		}
+		div{
+			button{
+				background-color: #333;
+			}
+		}
+	}
+}
+
+.addNewPlayerButton{
+	color: #ff0;
+	text-decoration: none;
+	border: 0.25em solid #ff0;
+	padding: 0.75em;
+	background-color: #333;
+	margin: 0.5em;
+	border-radius: 1em;
+	display: inline-block;
+}
+
+.addNewPlayerButton:hover{
+	color: #f00;
+	background-color: #bbb;
+	border-color: #f00;
+}

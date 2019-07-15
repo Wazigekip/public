@@ -1,0 +1,17 @@
+<app-sub-title [subTitle]="subTitle"></app-sub-title>
+
+<div class="container">
+	<a *ngFor="let game of games" routerLink="/game/{{game.id}}">
+		<div class="wrap">
+			<div class="text">
+				<span>{{game.id}}</span>{{game.name}}
+			</div>
+		</div>
+	</a>
+</div>
+
+<div>
+	<a class="newGameButton" routerLink="/newgame/{{gameLeader.id}}">
+		Make new game
+	</a>
+</div>
